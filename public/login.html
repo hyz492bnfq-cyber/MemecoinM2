@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d16">
+  <title>Accès privé — Meme Radar</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script src="/assets/login.js" defer></script>
+</head>
+<body class="auth-page">
+  <main class="auth-card">
+    <div class="brand-mark">◈</div>
+    <p class="eyebrow">PRIVATE INTELLIGENCE PLATFORM</p>
+    <h1>MEME RADAR</h1>
+    <p class="muted">Entre ton code privé pour accéder à ton espace.</p>
+    <form id="login-form">
+      <label for="access-code">Code d'accès</label>
+      <input id="access-code" name="code" type="password" autocomplete="current-password"
+             placeholder="Ton code privé" minlength="8" required autofocus>
+      <button class="primary-button" type="submit">Accéder au dashboard <span>→</span></button>
+      <p id="login-message" class="form-message" role="status" aria-live="polite"></p>
+    </form>
+    <p class="footnote"><span class="lock-dot"></span> Accès réservé aux personnes autorisées</p>
+  </main>
+</body>
+</html>
