@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d16">
+  <title>Dashboard — Meme Radar</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script src="/assets/dashboard.js" defer></script>
+</head>
+<body class="app-page">
+  <aside class="sidebar">
+    <a class="brand" href="/dashboard"><span class="brand-mark small">◈</span><span>MEME RADAR<small>INTELLIGENCE</small></span></a>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a class="nav-link active" href="#overview" data-view="overview"><span>▦</span> Vue générale</a>
+      <a class="nav-link" href="#scanner" data-view="scanner"><span>◎</span> Scanner live</a>
+      <a class="nav-link" href="#opportunities" data-view="opportunities"><span>↗</span> Opportunités</a>
+      <a class="nav-link" href="#security" data-view="security"><span>◇</span> Sécurité</a>
+      <a class="nav-link" href="#alerts" data-view="alerts"><span>♧</span> Alertes</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="system-status"><span class="status-dot"></span><span>Interface opérationnelle</span></div>
+      <button id="logout-button" class="logout-button">↪ Déconnexion</button>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">ESPACE PRIVÉ</p>
+        <h1 id="page-title">Vue générale</h1>
+      </div>
+      <div class="topbar-right"><span class="live-pill"><i></i> Connecté</span><div class="avatar">MR</div></div>
+    </header>
+
+    <section id="view-overview" class="view active-view">
+      <div class="welcome-panel">
+        <div><p class="eyebrow">MEME COIN INTELLIGENCE</p><h2>Bienvenue sur ton radar.</h2>
+          <p>Retrouve ici les signaux importants et les candidats à analyser.</p></div>
+        <div class="radar-art" aria-hidden="true">◎</div>
+      </div>
+      <div class="stats-grid">
+        <article class="stat-card"><span class="stat-label">Tokens surveillés</span><strong>—</strong><small>En attente du scanner</small></article>
+        <article class="stat-card"><span class="stat-label">Candidats détectés</span><strong>—</strong><small>Analyse non activée</small></article>
+        <article class="stat-card"><span class="stat-label">Alertes aujourd'hui</span><strong>—</strong><small>Pas encore de flux connecté</small></article>
+        <article class="stat-card"><span class="stat-label">Risques critiques</span><strong>—</strong><small>En attente des contrôles</small></article>
+      </div>
+      <div class="section-heading"><div><p class="eyebrow">CENTRE DE CONTRÔLE</p><h2>Ton espace de travail</h2></div></div>
+      <div class="quick-grid">
+        <button class="quick-card" data-go="scanner"><span class="quick-icon">◎</span><strong>Scanner live</strong><small>Voir les nouveaux tokens détectés</small><span class="card-arrow">→</span></button>
+        <button class="quick-card" data-go="opportunities"><span class="quick-icon">↗</span><strong>Opportunités</strong><small>Comparer les candidats et leurs scores</small><span class="card-arrow">→</span></button>
+        <button class="quick-card" data-go="security"><span class="quick-icon">◇</span><strong>Sécurité</strong><small>Contrôler les risques des tokens</small><span class="card-arrow">→</span></button>
+        <button class="quick-card" data-go="alerts"><span class="quick-icon">♧</span><strong>Alertes</strong><small>Retrouver les notifications</small><span class="card-arrow">→</span></button>
+      </div>
+      <div class="notice"><span>ⓘ</span><div><strong>Prochaine étape : connecter les données.</strong><p>Cette première version contient l'accès privé et l'interface. Aucun token réel n'est encore analysé et aucun score fictif n'est affiché comme une donnée réelle.</p></div></div>
+    </section>
+
+    <section id="view-scanner" class="view">
+      <div class="page-intro"><h2>Scanner live</h2><p>Les nouveaux tokens apparaîtront ici lorsque les sources blockchain seront connectées.</p></div>
+      <div class="empty-state"><span>◎</span><h3>Scanner en attente</h3><p>Le moteur de détection n'est pas encore connecté.</p></div>
+    </section>
+    <section id="view-opportunities" class="view">
+      <div class="page-intro"><h2>Opportunités</h2><p>Classement des tokens selon leurs signaux, leur potentiel et leurs risques.</p></div>
+      <div class="empty-state"><span>↗</span><h3>Aucun candidat pour le moment</h3><p>Les opportunités seront affichées après activation du scanner.</p></div>
+    </section>
+    <section id="view-security" class="view">
+      <div class="page-intro"><h2>Sécurité</h2><p>Contrôles de contrat, liquidité, concentration des détenteurs et wallets liés.</p></div>
+      <div class="empty-state"><span>◇</span><h3>Analyse de sécurité en attente</h3><p>Aucun token n'a encore été soumis à l'analyse.</p></div>
+    </section>
+    <section id="view-alerts" class="view">
+      <div class="page-intro"><h2>Alertes</h2><p>Historique des alertes Telegram et des événements détectés.</p></div>
+      <div class="empty-state"><span>♧</span><h3>Aucune alerte</h3><p>Tu seras notifié lorsque le scanner sera opérationnel.</p></div>
+    </section>
+    <footer class="app-footer">MEME RADAR <span>•</span> Interface privée</footer>
+  </main>
+</body>
+</html>
